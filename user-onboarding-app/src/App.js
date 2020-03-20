@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import axios from "axios";
 import UserForm from "./UserForm";
 import UsersList from "./UsersList";
 
@@ -10,6 +11,15 @@ function App() {
     console.log("adding user", newUser);
     setUsersListState([...usersListState, newUser]);
   };
+
+  axios
+    .post(`https://reqres.in/api/${UserForm}`)
+    .then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 
   return (
     <div className="App">
