@@ -13,7 +13,10 @@ function App() {
 
   return (
     <div className="App">
-      <UserForm addUser={addUserHandler} />
+      <UserForm
+        // @ts-ignore
+        addUser={addUserHandler}
+      />
       <UsersList users={usersListState} />
     </div>
   );

@@ -5,8 +5,9 @@ const UsersList = props => {
     <div className="users-list">
       {props.users.map(user => (
         <div className="user" key={user.id}>
-          <h2></h2>
-          <p></p>
+          <h2>{user.name}</h2>
+          <p>{user.email}</p>
+          <p>{user.password}</p>
         </div>
       ))}
     </div>
